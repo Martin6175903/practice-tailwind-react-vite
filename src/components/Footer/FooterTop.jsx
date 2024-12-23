@@ -1,16 +1,16 @@
 import React from 'react';
 import ItemList from "./list/itemList.jsx";
-import Item from "./list/Item.jsx";
+import List from "./list/List.jsx";
 
 const FooterTop = () => {
     return (
         <section className="py-[60px] border-b-[1px] border-gray bg-white">
             <div className="container">
-                <div className="items grid grid-cols-4 gap-[30px]">
-                    <Item/>
-                    <Item/>
-                    <Item/>
-                    <Item/>
+                <div className="items flex justify-around gap-[30px] flex-wrap">
+                    <List/>
+                    <List/>
+                    <List/>
+                    <List/>
                 </div>
             </div>
         </section>

@@ -1,16 +1,17 @@
 import React from 'react';
+import HeaderLink from "./HeaderLink.jsx";
 
 const HeaderTop = () => {
     return (
         <div className="bg-gray py-4">
             <div className="container">
                 <nav>
-                    <ul className="flex justify-center items-center gap-[30px]">
-                        <li><a href="#">Доставка</a></li>
-                        <li><a href="#">Оплата</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Вопрос - ответ</a></li>
-                        <li><a href="#">Контакты</a></li>
+                    <ul className="flex justify-center items-center gap-[30px] flex-wrap max-[768px]:gap-[15px]">
+                        <HeaderLink title="Доставка"/>
+                        <HeaderLink title="Оплата"/>
+                        <HeaderLink title="Отзывы"/>
+                        <HeaderLink title="Вопрос - ответ"/>
+                        <HeaderLink title="Контакты"/>
                     </ul>
                 </nav>
             </div>

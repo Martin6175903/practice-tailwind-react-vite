@@ -2,10 +2,10 @@ import React from 'react';
 
 const FooterBottom = () => {
     return (
-        <div className="container">
-            <div className="flex py-[25px] justify-between items-center text-[12px] text-dark-gray">
+        <div className="container max-[850px]:text-center">
+            <div className="flex gap-5 py-[25px] justify-between items-center flex-wrap text-[12px] text-dark-gray max-[850px]:justify-center">
                 <p>Лучший магазин (с) 2019 Все права защищены. Интернет-магазин оборудования для салонов красоты</p>
-                <a href="#">Политика конфиденциальности</a>
+                <a className="hover:text-pink" href="#">Политика конфиденциальности</a>
             </div>
         </div>
     );

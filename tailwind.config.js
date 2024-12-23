@@ -16,6 +16,7 @@ export default {
       'dark-gray': '#828282',
       'gray': '#efefef',
       'pink': '#f13c6e',
+      'pink-hover': '#fb2a62',
       'white': '#fff',
       'purple': 'rebeccapurple'
     },

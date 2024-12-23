@@ -14,6 +14,10 @@
     @apply animate-pulse;
     animation-duration: 1s;
   }
+  button:hover {
+    animation: none;
+    background-color: #f2eaf6;
+  }
   input {
     transition: all .3s ease-in-out;
     border: 2px solid transparent;
@@ -45,6 +49,9 @@
   path {
     transition: all .3s;
   }
+  section {
+    @apply max-[480px]:py-[40px] !important;
+  }
 }
 
 @layer components {
@@ -53,18 +60,59 @@
     padding: 0 15px;
     margin: 0 auto;
   }
+  .header-middle {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+  }
+  @media (max-width: 1024px) {
+    .header-middle {
+      justify-content: center;
+    }
+    .header-middle>*:nth-child(3) {
+      grid-column: span 2;
+    }
+  }
   .armchair-info {
-    background: url("assets/armchair-info/armchair.jpg") center center no-repeat;
+    background: url("../public/assets/armchair-info/armchair.jpg") center center no-repeat;
+  }
+  .item-row:not(:last-child) {
+    @apply border-b-[1px] border-gray;
   }
   .item-column {
-    padding: 35px 63px;
+    @apply py-[35px] px-[63px] max-[480px]:flex max-[480px]:justify-center max-[480px]:items-center;
+  }
+  .item-column:not(:last-child) {
+    @apply border-r-[1px] border-gray;
+  }
+  .item-column:nth-child(2) {
+    @apply max-[480px]:hidden;
+  }
+  .item-column:nth-child(3) {
+    @apply max-sm:hidden;
+  }
+  .item-column:last-child {
+    @apply max-md:hidden;
+  }
+  .item-column:hover .item-img {
+    transform: scale(0.93);
+    transition: all .3s;
+  }
+  .item-column {
+    cursor: grab;
   }
   .title {
     font-weight: 700;
     font-size: 24px;
+    display: inline-block;
+    cursor: grab;
+    @apply max-[480px]:text-[18px]
   }
-  .special-offers .item-btn {
-    animation-play-state: paused;
+  .title:hover {
+    transform: scale(1.05);
+  }
+  .special-offers .item-btn, .recently .item-btn {
+    animation: none;
   }
 }
 
