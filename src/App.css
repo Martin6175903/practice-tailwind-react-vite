@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.17;
+    font-weight: 400;
+    background: #efefef;
+  }
+  button {
+    @apply animate-pulse;
+    animation-duration: 1s;
+  }
+  input {
+    transition: all .3s ease-in-out;
+    border: 2px solid transparent;
+  }
+  input:focus-visible {
+    outline: none;
+    border: 2px solid rebeccapurple;
+  }
+  input:hover {
+    border: 2px solid #828282;
+  }
+  input:focus {
+    background-color: #ede1f9;
+    border: 2px solid rebeccapurple;
+  }
+  *:not(html, body):hover {
+    transition: all .2s ease-in-out;
+  }
+  a {
+    display: inline-block;
+  }
+  a:hover {
+    transform: scale(0.95);
+    text-decoration: underline;
+  }
+  label:hover path {
+    fill: #828282;
+  }
+  path {
+    transition: all .3s;
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .armchair-info {
+    background: url("assets/armchair-info/armchair.jpg") center center no-repeat;
+  }
+  .item-column {
+    padding: 35px 63px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .special-offers .item-btn {
+    animation-play-state: paused;
+  }
+}
+
+
